@@ -9,8 +9,14 @@ transcribed and cleaned up locally, then pasted into whatever app has focus.
 No audio leaves the Mac.
 
 ```sh
-brew install --cask aetosstore/tap/sanelo
+brew tap aetosstore/tap
+brew trust aetosstore/tap
+brew install --cask sanelo
 ```
+
+Homebrew requires you to explicitly trust a third-party tap before it will
+install casks from it - that is what the `brew trust` line is for. You only
+need to run it once.
 
 Requires an Apple Silicon Mac running macOS 14 (Sonoma) or newer.
 
