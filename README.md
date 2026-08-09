@@ -18,7 +18,49 @@ Homebrew requires you to explicitly trust a third-party tap before it will
 install casks from it - that is what the `brew trust` line is for. You only
 need to run it once.
 
+### If you get `zsh: command not found: brew`
+
+You either do not have Homebrew, or it is installed but not on your `PATH`.
+Check which one:
+
+```sh
+ls /opt/homebrew/bin/brew /usr/local/bin/brew
+```
+
+If neither path exists, install Homebrew first:
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+If one of them does exist, Homebrew is installed and just needs to be added to
+your shell. The Homebrew installer prints this step at the end and it is easy
+to miss:
+
+```sh
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+Use `/usr/local/bin/brew` instead of `/opt/homebrew/bin/brew` if that was the
+path that existed. Then run `brew --version` to confirm, and retry the three
+commands above.
+
 Requires an Apple Silicon Mac running macOS 14 (Sonoma) or newer.
+
+## Licence
+
+Installing with Homebrew gets you the app, not a licence. Sanelo asks for a
+licence key on first launch, exactly as the direct download does - Homebrew
+replaces the download step, not the licence.
+
+The key is free during the founding period. Check out at 0,00 EUR and it
+arrives by email:
+
+<https://store.aetos.pro/product/sanelo-for-mac/>
+
+Then open Sanelo from the menu bar and choose `Licence...` to enter it. The
+install prints these instructions as well.
 
 To upgrade:
 

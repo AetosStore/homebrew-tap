@@ -27,4 +27,18 @@ cask "sanelo" do
     "~/Library/Preferences/pro.aetos.sanelo.plist",
     "~/Library/Saved Application State/pro.aetos.sanelo.savedState",
   ]
+
+  caveats <<~EOS
+    Sanelo needs a licence key before it will start dictating.
+
+    It is free during the founding period. Check out at 0,00 EUR and the key
+    arrives by email:
+
+      https://store.aetos.pro/product/sanelo-for-mac/
+
+    Then open Sanelo from the menu bar and choose "Licence..." to enter it.
+
+    First launch downloads about 4 GB of speech and cleanup models. After that
+    Sanelo transcribes locally and no audio leaves the Mac.
+  EOS
 end
