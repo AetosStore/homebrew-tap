@@ -1,6 +1,6 @@
 cask "sanelo" do
-  version "22"
-  sha256 "8138bb77e4d64e0e7aa02599569456dca0b93be1112410a4c25e26c2d328ac17"
+  version "25"
+  sha256 "0bd1782374b8b7435e15b4288e887f279d20e122b6bc203469d7b567d8dd0473"
 
   url "https://github.com/AetosStore/Sanelo/releases/download/v#{version}/Sanelo-#{version}.dmg",
       verified: "github.com/AetosStore/Sanelo/"
